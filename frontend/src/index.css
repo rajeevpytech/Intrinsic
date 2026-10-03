@@ -1023,9 +1023,9 @@ select.cm-input { appearance: none; -webkit-appearance: none; background-image: 
 /* Deterministic on-load left-to-right wipe for hero images (runs as a keyframe on
    mount, so the motion is always visible; only animates clip-path so it coexists
    with a floating transform and preserves the image's own opacity). */
-@keyframes heroWipe { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
-.hero-wipe { animation: heroWipe 1.15s cubic-bezier(0.22,0.61,0.36,1) both; will-change: clip-path; }
-@media (prefers-reduced-motion: reduce) { .hero-wipe { animation: none; clip-path: none; } }
+.hero-wipe { clip-path: inset(0 100% 0 0); transition: clip-path 1.1s cubic-bezier(0.22,0.61,0.36,1); will-change: clip-path; }
+.hero-wipe.hw-in { clip-path: inset(0 0 0 0); }
+@media (prefers-reduced-motion: reduce) { .hero-wipe, .hero-wipe.hw-in { animation: none; clip-path: none; transition: none; } }
 
 /* Smooth, momentum scrolling (esp. mobile) */
 html { scroll-behavior: smooth; }

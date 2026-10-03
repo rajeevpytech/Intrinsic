@@ -52,6 +52,7 @@ import LiveEditProvider from "./components/editor/LiveEditProvider";
 import LiveEditor from "./components/editor/LiveEditor";
 import { SeoProvider, SeoController } from "./lib/SeoContext";
 import ImageReveal from "./components/ImageReveal";
+import HeroWipe from "./components/HeroWipe";
 
 const SCROLL_KEY = "intr_scroll_positions";
 const readScrolls = () => { try { return JSON.parse(sessionStorage.getItem(SCROLL_KEY)) || {}; } catch { return {}; } };
@@ -151,6 +152,7 @@ function App() {
         <SeoProvider>
         <SeoController />
         <ImageReveal />
+        <HeroWipe />
         <AutoReveal />
         <TextReveal />
         <ViewportScale />

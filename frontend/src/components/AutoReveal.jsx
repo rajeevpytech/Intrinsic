@@ -26,6 +26,7 @@ const applyImages = (io) => {
     img.loading = "lazy";
     img.decoding = "async";
     if (img.dataset.imgReveal) return;
+    if (img.classList.contains("hero-wipe") || img.closest(".hero-wipe")) { img.dataset.imgReveal = "1"; return; }
     if (img.classList.contains("air-band")) { img.dataset.imgReveal = "1"; return; }
     // leave motion-overlay images (ImageMotion: img + sibling svg) and existing draw-outs un-wiped
     if (img.parentElement && img.parentElement.querySelector("svg")) { img.dataset.imgReveal = "1"; return; }
