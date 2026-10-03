@@ -1,0 +1,90 @@
+{
+  "1920x1080": {
+    "/": {
+      "h": 1080.609375,
+      "innerH": 1080,
+      "testid": "home-hero",
+      "pass": true
+    },
+    "/industries/financial-services": {
+      "h": 1080,
+      "innerH": 1080,
+      "testid": "fin-hero",
+      "pass": true
+    },
+    "/industries/healthcare": {
+      "h": 1080,
+      "innerH": 1080,
+      "testid": "hc-hero",
+      "pass": true
+    },
+    "/industries/construction": {
+      "h": 1080,
+      "innerH": 1080,
+      "testid": "construction-hero",
+      "pass": true
+    },
+    "/industries/non-profit": {
+      "h": 1080,
+      "innerH": 1080,
+      "testid": "np-hero",
+      "pass": true
+    },
+    "/industries/professional-services": {
+      "h": 1080,
+      "innerH": 1080,
+      "testid": "ps-hero",
+      "pass": true
+    },
+    "/services/ai-readiness-assessment": {
+      "h": 1196.6875,
+      "innerH": 1080,
+      "testid": "air-hero",
+      "pass": true
+    }
+  },
+  "1280x800": {
+    "/": {
+      "h": 800,
+      "innerH": 800,
+      "testid": "home-hero",
+      "pass": true
+    },
+    "/industries/financial-services": {
+      "h": 800,
+      "innerH": 800,
+      "testid": "fin-hero",
+      "pass": true
+    },
+    "/industries/healthcare": {
+      "h": 800,
+      "innerH": 800,
+      "testid": "hc-hero",
+      "pass": true
+    },
+    "/industries/construction": {
+      "h": 800,
+      "innerH": 800,
+      "testid": "construction-hero",
+      "pass": true
+    },
+    "/industries/non-profit": {
+      "h": 800,
+      "innerH": 800,
+      "testid": "np-hero",
+      "pass": true
+    },
+    "/industries/professional-services": {
+      "h": 800,
+      "innerH": 800,
+      "testid": "ps-hero",
+      "pass": true
+    },
+    "/services/ai-readiness-assessment": {
+      "h": 834.59375,
+      "innerH": 800,
+      "testid": "air-hero",
+      "pass": true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "summary": "Verified hero full-viewport-height fix on previously broken pages + regression sweep. All 7 target heroes (home, fin, hc, construction, np, ps, air) now render at >= innerHeight at both 1920x1080 and 1280x800. Overflow sweep across 11 routes x 4 viewports (390/768/1280/1920) = 44 checks, all pass (scrollWidth == innerWidth).",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/test_reports/_hero_heights.json",
+    "/app/test_reports/_overflow.json"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Hero fix (removing the override in index.css that opted industry/air heroes out of the 100svh treatment) is working as intended — measured heroH >= vh on all target routes.",
+    "AiReadiness hero measures slightly taller than vh (1196 at 1080, 834 at 800) due to grid content height exceeding min-height; not a regression but worth noting if a strict exactly-100svh is desired."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (not requested)", "frontend": "100% (14/14 hero height checks, 44/44 overflow checks)"},
+  "test_credentials": "N/A - public pages",
+  "seed_data_creation": "none",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Hero full-viewport-height verified across all 7 target routes at desktop. No horizontal overflow at any of the 4 viewports (390/768/1280/1920) across 11 critical routes. Measurements: home-hero/fin-hero/hc-hero/construction-hero/np-hero/ps-hero all = 1080 @ 1920x1080 and = 800 @ 1280x800. air-hero slightly exceeds vh due to content (1196/834) which still satisfies the >= vh requirement. Cloudflare challenge was transient; retry via domcontentloaded + 400-800ms wait worked reliably.",
+  "rca of the issue": "Previously an index.css override (`:is([data-testid=fin-hero],...){ min-height:0; display:block }`) opted the industry and air-readiness heroes out of the site-wide `.page-in main > section:first-child { min-height: calc(100svh/var(--z)); display:grid; align-content:center }` rule, causing shorter heroes. The override was removed so these sections inherit the full-viewport treatment. Verified via element.getBoundingClientRect().height >= window.innerHeight (same visual/zoomed space)."
+}

@@ -31,3 +31,9 @@ admin@intrinsicamerica.com / IntrinsicAdmin2026! (env-seeded; see memory/test_cr
 
 ## 2026-06 — Full-site QA sweep (pre-GitHub)
 - Testing agent (iteration_6): all 41 routes × 4 viewports (390/768/1280/1920) = 164 combos. Zero console/script errors, zero failed requests, zero broken images, zero horizontal overflow. Admin login + /admin verified. 100% pass. No fixes needed.
+
+## 2026-06 — Full-viewport heroes on industry/sub pages
+- Bug: industry pages + sub-pages (fin/hc/construction/np/ps + air-readiness + generic industry-hero) had short heroes; next section appeared before the fold.
+- Cause: an index.css override forced `min-height:0; display:block` on :is([data-testid=fin-hero],hc-hero,construction-hero,np-hero,ps-hero,industry-hero,air-hero), opting them out of the site-wide `.page-in main > section:first-child { min-height:100svh/var(--z); display:grid; align-content:center }` treatment.
+- Fix: removed that override block. All heroes now fill the full viewport like the homepage.
+- Verified by testing agent (iteration_7): 14/14 hero-height checks (>= innerHeight) at 1920/1280; 44/44 overflow checks across 11 routes x 4 viewports. 100% pass.

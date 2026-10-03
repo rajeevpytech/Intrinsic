@@ -1,0 +1,230 @@
+{
+  "390x844": {
+    "/": {
+      "sw": 390,
+      "iw": 390,
+      "pass": true
+    },
+    "/services/cloud": {
+      "sw": 390,
+      "iw": 390,
+      "pass": true
+    },
+    "/services/cybersecurity": {
+      "sw": 390,
+      "iw": 390,
+      "pass": true
+    },
+    "/about": {
+      "sw": 390,
+      "iw": 390,
+      "pass": true
+    },
+    "/contact": {
+      "sw": 390,
+      "iw": 390,
+      "pass": true
+    },
+    "/industries/financial-services": {
+      "sw": 390,
+      "iw": 390,
+      "pass": true
+    },
+    "/industries/healthcare": {
+      "sw": 390,
+      "iw": 390,
+      "pass": true
+    },
+    "/industries/construction": {
+      "sw": 390,
+      "iw": 390,
+      "pass": true
+    },
+    "/industries/non-profit": {
+      "sw": 390,
+      "iw": 390,
+      "pass": true
+    },
+    "/industries/professional-services": {
+      "sw": 390,
+      "iw": 390,
+      "pass": true
+    },
+    "/services/ai-readiness-assessment": {
+      "sw": 390,
+      "iw": 390,
+      "pass": true
+    }
+  },
+  "768x1024": {
+    "/": {
+      "sw": 768,
+      "iw": 768,
+      "pass": true
+    },
+    "/services/cloud": {
+      "sw": 768,
+      "iw": 768,
+      "pass": true
+    },
+    "/services/cybersecurity": {
+      "sw": 768,
+      "iw": 768,
+      "pass": true
+    },
+    "/about": {
+      "sw": 768,
+      "iw": 768,
+      "pass": true
+    },
+    "/contact": {
+      "sw": 768,
+      "iw": 768,
+      "pass": true
+    },
+    "/industries/financial-services": {
+      "sw": 768,
+      "iw": 768,
+      "pass": true
+    },
+    "/industries/healthcare": {
+      "sw": 768,
+      "iw": 768,
+      "pass": true
+    },
+    "/industries/construction": {
+      "sw": 768,
+      "iw": 768,
+      "pass": true
+    },
+    "/industries/non-profit": {
+      "sw": 768,
+      "iw": 768,
+      "pass": true
+    },
+    "/industries/professional-services": {
+      "sw": 768,
+      "iw": 768,
+      "pass": true
+    },
+    "/services/ai-readiness-assessment": {
+      "sw": 768,
+      "iw": 768,
+      "pass": true
+    }
+  },
+  "1280x800": {
+    "/": {
+      "sw": 1280,
+      "iw": 1280,
+      "pass": true
+    },
+    "/services/cloud": {
+      "sw": 1280,
+      "iw": 1280,
+      "pass": true
+    },
+    "/services/cybersecurity": {
+      "sw": 1280,
+      "iw": 1280,
+      "pass": true
+    },
+    "/about": {
+      "sw": 1280,
+      "iw": 1280,
+      "pass": true
+    },
+    "/contact": {
+      "sw": 1280,
+      "iw": 1280,
+      "pass": true
+    },
+    "/industries/financial-services": {
+      "sw": 1280,
+      "iw": 1280,
+      "pass": true
+    },
+    "/industries/healthcare": {
+      "sw": 1280,
+      "iw": 1280,
+      "pass": true
+    },
+    "/industries/construction": {
+      "sw": 1280,
+      "iw": 1280,
+      "pass": true
+    },
+    "/industries/non-profit": {
+      "sw": 1280,
+      "iw": 1280,
+      "pass": true
+    },
+    "/industries/professional-services": {
+      "sw": 1280,
+      "iw": 1280,
+      "pass": true
+    },
+    "/services/ai-readiness-assessment": {
+      "sw": 1280,
+      "iw": 1280,
+      "pass": true
+    }
+  },
+  "1920x1080": {
+    "/": {
+      "sw": 1920,
+      "iw": 1920,
+      "pass": true
+    },
+    "/services/cloud": {
+      "sw": 1920,
+      "iw": 1920,
+      "pass": true
+    },
+    "/services/cybersecurity": {
+      "sw": 1920,
+      "iw": 1920,
+      "pass": true
+    },
+    "/about": {
+      "sw": 1920,
+      "iw": 1920,
+      "pass": true
+    },
+    "/contact": {
+      "sw": 1920,
+      "iw": 1920,
+      "pass": true
+    },
+    "/industries/financial-services": {
+      "sw": 1920,
+      "iw": 1920,
+      "pass": true
+    },
+    "/industries/healthcare": {
+      "sw": 1920,
+      "iw": 1920,
+      "pass": true
+    },
+    "/industries/construction": {
+      "sw": 1920,
+      "iw": 1920,
+      "pass": true
+    },
+    "/industries/non-profit": {
+      "sw": 1920,
+      "iw": 1920,
+      "pass": true
+    },
+    "/industries/professional-services": {
+      "sw": 1920,
+      "iw": 1920,
+      "pass": true
+    },
+    "/services/ai-readiness-assessment": {
+      "sw": 1920,
+      "iw": 1920,
+      "pass": true
+    }
+  }
+}
