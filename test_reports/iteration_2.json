@@ -1,0 +1,41 @@
+{
+  "summary": "Frontend-only verification of 4 reported fixes on Intrinsic Technology marketing site. Tested at 1920x900 (CSS zoom active, body.style.zoom=1.4056), 1280x900 (no zoom), and 390x844. All reported issues are resolved.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "verification_details": {
+    "home_security_diagram_visible": {
+      "1920x900_zoom": "clip-path=inset(0px), classes include lr-reveal-in, naturalWidth=927, visible after scroll",
+      "1280x900_no_zoom": "clip-path=none, naturalWidth=927, visible (never clipped - above-fold scan skipped)",
+      "390x844_mobile": "clip-path=none, naturalWidth=927, visible"
+    },
+    "all_home_images_reveal": "After scroll + safety sweep, zero main img.lr-reveal remain without lr-reveal-in at all 3 viewports",
+    "industry_hero_natural_height": {
+      "np-hero": "min-height=0px, align-content=normal, h1Top=276(1920)/196(1280)",
+      "construction-hero": "min-height=0px, align-content=normal, h1Top=281/200",
+      "ps-hero": "min-height=0px, align-content=normal, h1Top=281/200",
+      "fin-hero": "min-height=0px, align-content=normal, h1Top=318/205",
+      "hc-hero": "min-height=0px, align-content=normal, h1Top=307/191",
+      "industry-hero (retail)": "Page renders a 'Coming Soon' fallback — expected, no industry-hero testid, no bug"
+    },
+    "industry_hero_image_reveal": "All 5 industry sub-pages' first-section <img> ended with class lr-reveal-in / img-reveal is-in, clip-path=inset(0px), opacity=1 at both viewports",
+    "navigation_flash": "Home -> Cybersecurity -> Industries -> non-profit -> Home: at 400ms after each nav, h1 and main content text (len>3000) already correct, no le-wait class, no flash of default content observed",
+    "regression_home_and_cyber_hero": "Both load with correct h1 at 1920 and 390 viewports; hero images present (reveal as expected on scroll)"
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "ImageReveal 4s safety sweep is a good fallback but means images could briefly appear clipped for up to 4s under zoom if an edge case misses them; current scan() excludes above-fold images (top < innerHeight*0.9) so initial paint is fine.",
+    "LiveEditProvider.jsx is 366 lines and dense — consider splitting into hooks (useTheme, useBlocks, useEditsSync) for maintainability (>700 line threshold not hit, so advisory only).",
+    "firstPaintPending counter is a module-level let; a hot-reload or SSR context could leave it in a stale state. Low risk in CRA dev-only."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped)", "frontend": "100%"},
+  "seed_data_creation": "none",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "All 4 reported issues verified fixed. /industries/retail intentionally renders a 'Coming Soon' fallback (no industry-hero testid); treat that as expected unless the spec changes. Always test both >1366 (zoom) and <=1366 widths because document.body.style.zoom only applies when viewport>1366 (ViewportScale in App.js)."
+}

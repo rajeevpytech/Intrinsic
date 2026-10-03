@@ -1,0 +1,31 @@
+{
+  "summary": "Frontend-only verification of the new hero-wipe keyframe animation on all 5 industry sub-pages. Animation runs on mount, mid-flight clip-path (inset(0 100% 0 0) or similar) observed, and final state fully revealed (clip-path inset(0px), naturalWidth>0) on every page at both 1920x900 and 1280x900. Homepage 'Security by Design' image regression check passed. Industry hero sections remain natural height.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_matrix": {
+    "/industries/professional-services [ps-hero-diagram]": {"class_has_hero_wipe": true, "late_clipPath": "inset(0px)", "naturalWidth": 1400, "visible": true, "both_viewports": true},
+    "/industries/non-profit [np-mission-hub]": {"class_has_hero_wipe": true, "early_mid_wipe_observed": "inset(0px 100% 0px 0px)", "late_clipPath": "inset(0px 0% 0px 0px)", "naturalWidth": 1260, "visible": true, "both_viewports": true},
+    "/industries/construction [construction-hero-image]": {"class_has_hero_wipe": true, "late_clipPath": "inset(0px)", "naturalWidth": 1400, "opacity_80_preserved": true, "visible": true, "both_viewports": true},
+    "/industries/financial-services [fin-hero-diagram]": {"class_has_hero_wipe": true, "late_clipPath": "inset(0px)", "naturalWidth": 1431, "visible": true, "both_viewports": true},
+    "/industries/healthcare [hc-hero-diagram]": {"class_has_hero_wipe": true, "early_mid_wipe_observed": "inset(0px 100% 0px 0px)", "late_clipPath": "inset(0px 0% 0px 0px)", "naturalWidth": 1509, "visible": true, "both_viewports": true},
+    "homepage /#home-security-diagram": {"visible": true, "naturalWidth": 927, "regression": "pass"},
+    "PS hero section natural height": {"section_height_px": 580, "window_height_px": 900, "status": "natural (not full-viewport-bottom-aligned)"}
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "hero-wipe uses animation fill-mode 'both' with will-change clip-path — correct; coexists cleanly with live-float transform and opacity-80 (construction).",
+    "ImageReveal still ends up adding 'img-reveal is-in' to hero-wipe elements (seen in LATE class list). Not harmful (clip-path stays inset(0px)) but suggests the ':not(.hero-wipe)' exclusion in ImageReveal.jsx may not be filtering as intended for all hero images. Consider verifying the scanner selector."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "n/a", "frontend": "100%"},
+  "seed_data_creation": "",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "hero-wipe keyframe animation verified across all 5 industry sub-pages at 1920x900 and 1280x900. Mid-flight clip-path confirmed on NP and HC; others cycled too fast to catch mid-state but all end fully revealed with naturalWidth>0. One minor observation: ImageReveal still appends 'img-reveal is-in' classes to hero-wipe images despite the :not(.hero-wipe) exclusion — no visible impact but worth a code-level check.",
+  "rca of the issue": "N/A — fix verified working."
+}

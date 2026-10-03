@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500" role="img" aria-labelledby="title desc">
+  <title id="title">Client Delivery System</title>
+  <desc id="desc">Project teams, client communication, business applications, documents and continuity connected to client delivery.</desc>
+  <defs>
+    <style>
+      .line{fill:none;stroke:#477CA8;stroke-width:3;stroke-linecap:square;stroke-linejoin:miter}
+      .icon{fill:none;stroke:#26659D;stroke-width:3;stroke-linejoin:round}
+      .head{font:700 24px Arial,Helvetica,sans-serif;letter-spacing:1.2px;fill:#00388E}
+      .body{font:500 21px Arial,Helvetica,sans-serif;letter-spacing:2px;fill:#6683A0}
+      .center{font:700 28px Arial,Helvetica,sans-serif;letter-spacing:2px;fill:#00388E}
+    </style>
+  </defs>
+
+  <!-- Project teams icon -->
+  <g class="icon" transform="translate(35 48)">
+    <rect x="0" y="42" width="34" height="68"/><rect x="34" y="5" width="38" height="105"/><rect x="72" y="58" width="30" height="52"/>
+    <path d="M10 57h7m-7 17h7m-7 17h7M46 20h8m-8 17h8m-8 17h8m-8 17h8m-8 17h8M82 72h7m-7 17h7"/>
+  </g>
+  <text class="head" x="165" y="68">PROJECT TEAMS</text>
+  <text class="body" x="165" y="105">PLAN</text><text class="body" x="165" y="136">COLLABORATE</text><text class="body" x="165" y="167">DELIVER</text>
+
+  <!-- Client communication icon -->
+  <g class="icon" transform="translate(1128 46)">
+    <path d="M0 0h70v52H31l-19 16V52H0z"/><path d="M44 34h62v52H76L57 102V86H44z"/>
+  </g>
+  <text class="head" x="1280" y="68">CLIENT COMMUNICATION</text>
+  <text class="body" x="1280" y="105">SHARE</text><text class="body" x="1280" y="136">ALIGN</text><text class="body" x="1280" y="167">BUILD TRUST</text>
+
+  <!-- Business applications icon -->
+  <g class="icon" transform="translate(35 290)">
+    <rect x="0" y="60" width="26" height="55"/><rect x="34" y="33" width="26" height="82"/><rect x="68" y="0" width="26" height="115"/>
+  </g>
+  <text class="head" x="165" y="312">BUSINESS APPLICATIONS</text>
+  <text class="body" x="165" y="349">ACCOUNTING</text><text class="body" x="165" y="380">PROJECT MANAGEMENT</text><text class="body" x="165" y="411">INDUSTRY TOOLS</text>
+
+  <!-- Documents icon -->
+  <g class="icon" transform="translate(650 292)">
+    <path d="M0 0h52l28 28v96H0zM52 0v28h28M17 54h45M17 73h45M17 92h34"/>
+  </g>
+  <text class="head" x="760" y="312">DOCUMENTS</text>
+  <text class="body" x="760" y="349">CREATE</text><text class="body" x="760" y="380">SHARE</text><text class="body" x="760" y="411">PROTECT</text>
+
+  <!-- Continuity icon -->
+  <g class="icon" transform="translate(1162 286)">
+    <rect x="0" y="0" width="82" height="36"/><rect x="0" y="42" width="82" height="36"/><rect x="0" y="84" width="82" height="36"/>
+    <path d="M65 18h5M65 60h5M65 102h5"/>
+  </g>
+  <text class="head" x="1320" y="312">CONTINUITY</text>
+  <text class="body" x="1320" y="349">BACKUP</text><text class="body" x="1320" y="380">RECOVERY</text><text class="body" x="1320" y="411">KEEP WORK MOVING</text>
+
+  <!-- Center box -->
+  <rect x="585" y="150" width="430" height="92" rx="4" class="line"/>
+  <text class="center" x="800" y="207" text-anchor="middle">CLIENT DELIVERY</text>
+
+  <!-- Connectors -->
+  <path class="line" d="M420 96h90l75 74M1128 96h-90l-75 74M418 352h115l76-110M730 292v-50M1162 352h-115l-76-110"/>
+</svg>

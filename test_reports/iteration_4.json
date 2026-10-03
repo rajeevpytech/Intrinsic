@@ -1,0 +1,21 @@
+{
+  "summary": "Frontend-only verification of air-hero gradient-band fix and findings-card background. All checks pass: air-hero has computed min-height:0px, display:block, align-content:normal, padding-bottom:0px, and the gap between [data-testid=air-hero] and [data-testid=air-context] is 0px at both 1920x900 (zoom 1.4056) and 1280x900 (no zoom) — no blue gradient band is visible. Hero content (eyebrow, H1 'Establishing the Foundation for AI Adoption', paragraphs, gold CTA, air-hero-image-full with naturalWidth=933) all render correctly. Findings card ([data-testid=air-findings]) list items have transparent backgrounds; only the number-badge <span> children have blue backgrounds (expected). No amber/orange backgrounds anywhere in the DOM — the orange the user observed is confirmed to be a Yandex browser translation overlay artifact, not a site bug. Regression on /services/cybersecurity, /services/cloud, /services/managed-it, and / (homepage) at 1920x900 and 390x844 shows all first-section heroes still use the grid/min-height path with gap=0 to next sibling and no broken images.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "index.css natural-height exception correctly scopes air-hero alongside the existing industry-hero testids via :is(...) — scalable pattern.",
+    "The hero's gray inner background and section-level gradients come from DB-stored LiveEditProvider CSS; the structural CSS exception in index.css correctly neutralizes the forced 100svh min-height so the inner block fills without exposing the gradient."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A", "frontend": "100%"},
+  "seed_data_creation": "",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Air-hero gradient band fix verified via computed-style assertions (minHeight=0px, display=block, paddingBottom=0px, gap-to-next=0px at both zoom and non-zoom widths). Hero image testid: air-hero-image-full (naturalWidth=933). Findings list items are transparent — any orange seen is browser translation overlay. Other first-section heroes (cyber-hero, cloud-hero, managed-hero, home-hero) remain on the grid/100svh min-height exception path and are unaffected."
+}

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="sbtitle sbdesc">
+  <title id="sbtitle">Security Boundary</title>
+  <desc id="sbdesc">Email, shared files, client portals, applications and devices inside a managed security boundary.</desc>
+  <defs>
+    <style>
+      .bd{fill:none;stroke:rgba(255,255,255,0.35);stroke-width:2}
+      .ic{fill:none;stroke:#bfe3d4;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+      .lbl{font:700 17px Arial,Helvetica,sans-serif;letter-spacing:1.4px;fill:#eef6f1;text-anchor:middle}
+      .bnd{font:700 15px Arial,Helvetica,sans-serif;letter-spacing:3px;fill:#9fd3bd}
+      .dot{fill:#f5a623}
+    </style>
+  </defs>
+
+  <!-- boundary -->
+  <rect x="24" y="60" width="1152" height="210" rx="10" class="bd"/>
+  <g transform="translate(48 44)">
+    <path class="ic" d="M0 6 L11 0 L22 6 V16 C22 24 11 30 11 30 C11 30 0 24 0 16 Z" stroke="#9fd3bd"/>
+  </g>
+  <text class="bnd" x="82" y="52">SECURITY BOUNDARY</text>
+
+  <!-- 5 items -->
+  <!-- EMAIL -->
+  <g class="ic" transform="translate(96 120)"><rect x="0" y="0" width="70" height="48" rx="4"/><path d="M0 4 L35 30 L70 4"/></g>
+  <text class="lbl" x="131" y="212">EMAIL</text>
+
+  <!-- SHARED FILES -->
+  <g class="ic" transform="translate(320 118)"><path d="M0 10 h26 l8 10 h36 v40 H0 Z"/></g>
+  <text class="lbl" x="355" y="212">SHARED FILES</text>
+
+  <!-- CLIENT PORTALS -->
+  <g class="ic" transform="translate(548 116)"><rect x="0" y="0" width="76" height="56" rx="4"/><path d="M0 16 h76 M12 8 h2 M20 8 h2"/></g>
+  <text class="lbl" x="586" y="212">CLIENT PORTALS</text>
+
+  <!-- APPLICATIONS -->
+  <g class="ic" transform="translate(788 118)"><rect x="0" y="0" width="24" height="24" rx="3"/><rect x="34" y="0" width="24" height="24" rx="3"/><rect x="0" y="34" width="24" height="24" rx="3"/><rect x="34" y="34" width="24" height="24" rx="3"/></g>
+  <text class="lbl" x="817" y="212">APPLICATIONS</text>
+
+  <!-- DEVICES -->
+  <g class="ic" transform="translate(1000 116)"><rect x="0" y="0" width="72" height="46" rx="3"/><path d="M26 58 h20"/><rect x="80" y="20" width="22" height="40" rx="3"/></g>
+  <text class="lbl" x="1050" y="212">DEVICES</text>
+
+  <!-- amber connectors -->
+  <circle class="dot" cx="243" cy="144" r="5"/>
+  <circle class="dot" cx="466" cy="144" r="5"/>
+  <circle class="dot" cx="700" cy="144" r="5"/>
+  <circle class="dot" cx="920" cy="144" r="5"/>
+</svg>
