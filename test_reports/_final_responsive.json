@@ -1,0 +1,787 @@
+{
+  "overflow": [],
+  "console_errors": [
+    {
+      "route": "/services/cybersecurity",
+      "vp": "m390",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/cybersecurity",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/cybersecurity",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/cybersecurity",
+      "vp": "d1280",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/cybersecurity",
+      "vp": "d1920",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/networking",
+      "vp": "m375",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/networking",
+      "vp": "m390",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/networking",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/networking",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/networking",
+      "vp": "d1280",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/networking",
+      "vp": "d1920",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/network-perimeter-security",
+      "vp": "m375",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/network-perimeter-security",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/network-perimeter-security",
+      "vp": "d1920",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Refused to execute script from 'https://intrinsic-deploy-1.preview.emergentagent.com/static/js/bundle.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled."
+      ]
+    },
+    {
+      "route": "/services/microsoft-365",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/vcio-vciso",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/vcio-vciso",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/vcio-vciso",
+      "vp": "d1920",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/resources/service-briefs",
+      "vp": "m390",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "%c%d font-size:0;color:transparent NaN"
+      ]
+    },
+    {
+      "route": "/resources/service-briefs",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/resources/service-briefs",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/resources/service-briefs",
+      "vp": "d1280",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN"
+      ]
+    },
+    {
+      "route": "/case-studies/consolidating-microsoft-365-domains-and-sharepoint-without-downtime",
+      "vp": "m375",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "%c%d font-size:0;color:transparent NaN"
+      ]
+    },
+    {
+      "route": "/case-studies/consolidating-microsoft-365-domains-and-sharepoint-without-downtime",
+      "vp": "d1920",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/managed-it-services",
+      "vp": "m375",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/managed-it-services",
+      "vp": "m390",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Refused to execute script from 'https://intrinsic-deploy-1.preview.emergentagent.com/static/js/bundle.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled."
+      ]
+    },
+    {
+      "route": "/services/managed-it-services",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN"
+      ]
+    },
+    {
+      "route": "/services/managed-it-services",
+      "vp": "d1280",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/managed-it-services",
+      "vp": "d1920",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/security-governance-compliance",
+      "vp": "m375",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/security-governance-compliance",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/security-governance-compliance",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/security-governance-compliance",
+      "vp": "d1280",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/security-governance-compliance",
+      "vp": "d1920",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/co-managed-it",
+      "vp": "m390",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/cloud-infrastructure-migration",
+      "vp": "m390",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "%c%d font-size:0;color:transparent NaN"
+      ]
+    },
+    {
+      "route": "/services/ai",
+      "vp": "t768",
+      "errors": [
+        "WebSocket connection to 'wss://intrinsic-deploy-1.preview.emergentagent.com/ws' failed: Error during WebSocket handshake: Unexpected response code: 429",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "%c%d font-size:0;color:transparent NaN"
+      ]
+    },
+    {
+      "route": "/services/ai-automation",
+      "vp": "m375",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-automation",
+      "vp": "m390",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-automation",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-automation",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-automation",
+      "vp": "d1280",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-automation",
+      "vp": "d1920",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-readiness-assessment",
+      "vp": "m375",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-readiness-assessment",
+      "vp": "m390",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-readiness-assessment",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-readiness-assessment",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-readiness-assessment",
+      "vp": "d1280",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-readiness-assessment",
+      "vp": "d1920",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/managed-ai",
+      "vp": "m375",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/managed-ai",
+      "vp": "m390",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/managed-ai",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/managed-ai",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/managed-ai",
+      "vp": "d1920",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-governance-compliance",
+      "vp": "m375",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/services/ai-governance-compliance",
+      "vp": "d1280",
+      "errors": [
+        "WebSocket connection to 'wss://intrinsic-deploy-1.preview.emergentagent.com/ws' failed: Error during WebSocket handshake: Unexpected response code: 429"
+      ]
+    },
+    {
+      "route": "/services/ai-governance-compliance",
+      "vp": "d1920",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "%c%d font-size:0;color:transparent NaN"
+      ]
+    },
+    {
+      "route": "/services/backup-disaster-recovery",
+      "vp": "d1280",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN"
+      ]
+    },
+    {
+      "route": "/industries",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries",
+      "vp": "d1280",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries",
+      "vp": "d1920",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/construction",
+      "vp": "m375",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/construction",
+      "vp": "m390",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/construction",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/construction",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/construction",
+      "vp": "d1280",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN"
+      ]
+    },
+    {
+      "route": "/industries/professional-services",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/professional-services",
+      "vp": "d1280",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/financial-services",
+      "vp": "m375",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/financial-services",
+      "vp": "m390",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/financial-services",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/financial-services",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/financial-services",
+      "vp": "d1280",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/non-profit",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/non-profit",
+      "vp": "t820",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN"
+      ]
+    },
+    {
+      "route": "/industries/healthcare",
+      "vp": "m390",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()"
+      ]
+    },
+    {
+      "route": "/industries/healthcare",
+      "vp": "t768",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "%c%d font-size:0;color:transparent NaN"
+      ]
+    },
+    {
+      "route": "/admin/login",
+      "vp": "m375",
+      "errors": [
+        "Failed to load resource: the server responded with a status of 429 ()",
+        "%c%d font-size:0;color:transparent NaN",
+        "%c%d font-size:0;color:transparent NaN"
+      ]
+    }
+  ],
+  "hero": [],
+  "mobile_layout": [
+    {
+      "route": "/",
+      "hamburger_opens": true,
+      "visible_links_after_open": 58,
+      "images": {
+        "total": 24,
+        "broken": 0,
+        "srcs": []
+      },
+      "footer": {
+        "w": 295.40625,
+        "iw": 390
+      }
+    },
+    {
+      "route": "/about",
+      "hamburger_opens": true,
+      "visible_links_after_open": 42,
+      "images": {
+        "total": 6,
+        "broken": 0,
+        "srcs": []
+      },
+      "footer": {
+        "w": 390,
+        "iw": 390
+      }
+    },
+    {
+      "route": "/services/cybersecurity",
+      "hamburger_opens": true,
+      "visible_links_after_open": 53,
+      "images": {
+        "total": 7,
+        "broken": 0,
+        "srcs": []
+      },
+      "footer": {
+        "w": 390,
+        "iw": 390
+      }
+    },
+    {
+      "route": "/industries/healthcare",
+      "hamburger_opens": true,
+      "visible_links_after_open": 40,
+      "images": {
+        "total": 8,
+        "broken": 0,
+        "srcs": []
+      },
+      "footer": {
+        "w": 390,
+        "iw": 390
+      }
+    },
+    {
+      "route": "/contact",
+      "hamburger_opens": true,
+      "visible_links_after_open": 41,
+      "images": {
+        "total": 3,
+        "broken": 0,
+        "srcs": []
+      },
+      "footer": {
+        "w": 390,
+        "iw": 390
+      }
+    },
+    {
+      "route": "/resources",
+      "hamburger_opens": true,
+      "visible_links_after_open": 48,
+      "images": {
+        "total": 11,
+        "broken": 0,
+        "srcs": []
+      },
+      "footer": {
+        "w": 390,
+        "iw": 390
+      }
+    }
+  ]
+}
