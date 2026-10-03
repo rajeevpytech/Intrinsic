@@ -40,19 +40,6 @@ html {
   padding-bottom: clamp(2.75rem, 6vh, 5.5rem);
 }
 
-/* Industry sub-page heroes are compact by design (their own internal padding) —
-   keep them at natural height instead of the full-viewport bottom-aligned treatment. */
-.page-in main > section:first-child:is(
-  [data-testid="construction-hero"], [data-testid="ps-hero"], [data-testid="fin-hero"],
-  [data-testid="hc-hero"], [data-testid="np-hero"], [data-testid="industry-hero"],
-  [data-testid="air-hero"]
-) {
-  min-height: 0;
-  display: block;
-  align-content: initial;
-  padding-bottom: 0;
-}
-
 /* Content sections: 65/35 top/bottom split (total padding preserved).
    .page-in section.py-N  (specificity 0,2,0) overrides Tailwind .py-N (0,1,0). */
 .page-in section.py-8  { padding-top: 2.6rem;  padding-bottom: 1.4rem; }
