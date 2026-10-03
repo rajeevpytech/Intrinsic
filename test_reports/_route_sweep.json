@@ -1,0 +1,289 @@
+{
+  "/": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 6379,
+    "overflow": {}
+  },
+  "/about": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 4093,
+    "overflow": {}
+  },
+  "/careers": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 1837,
+    "overflow": {}
+  },
+  "/careers/cloud-solutions-engineer": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 1845,
+    "overflow": {}
+  },
+  "/resources": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 3369,
+    "overflow": {}
+  },
+  "/contact": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 1644,
+    "overflow": {}
+  },
+  "/privacy-policy": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 2994,
+    "overflow": {}
+  },
+  "/terms-of-service": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 2630,
+    "overflow": {}
+  },
+  "/security-risk-assessment": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 2991,
+    "overflow": {}
+  },
+  "/services/cybersecurity": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 3817,
+    "overflow": {}
+  },
+  "/services/networking": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 5061,
+    "overflow": {}
+  },
+  "/services/network-perimeter-security": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 3953,
+    "overflow": {}
+  },
+  "/services/microsoft-365": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 6211,
+    "overflow": {}
+  },
+  "/services/managed-it": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 6898,
+    "overflow": {}
+  },
+  "/services/managed-support": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 6898,
+    "overflow": {}
+  },
+  "/services/vcio-vciso": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 3907,
+    "overflow": {}
+  },
+  "/resources/service-briefs": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 3369,
+    "overflow": {}
+  },
+  "/case-studies/consolidating-microsoft-365-domains-and-sharepoint-without-downtime": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 5406,
+    "overflow": {}
+  },
+  "/services/managed-it-services": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 3180,
+    "overflow": {}
+  },
+  "/services/security-governance-compliance": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 5501,
+    "overflow": {}
+  },
+  "/services/co-managed-it": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 6532,
+    "overflow": {}
+  },
+  "/services/security-monitoring-siem": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 3348,
+    "overflow": {}
+  },
+  "/services/security-assessments": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 4974,
+    "overflow": {}
+  },
+  "/services/remote-monitoring-management": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 5634,
+    "overflow": {}
+  },
+  "/services/threat-detection-response": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 6192,
+    "overflow": {}
+  },
+  "/services/identity-endpoint-security": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 4129,
+    "overflow": {}
+  },
+  "/services/cloud": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 5351,
+    "overflow": {}
+  },
+  "/services/cloud-infrastructure-migration": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 7021,
+    "overflow": {}
+  },
+  "/services/ai": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 4244,
+    "overflow": {}
+  },
+  "/services/ai-automation": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 4244,
+    "overflow": {}
+  },
+  "/services/ai-readiness-assessment": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 6699,
+    "overflow": {}
+  },
+  "/services/managed-ai": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 5741,
+    "overflow": {}
+  },
+  "/services/ai-governance-compliance": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 6303,
+    "overflow": {}
+  },
+  "/services/backup-disaster-recovery": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 4416,
+    "overflow": {}
+  },
+  "/industries": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 4339,
+    "overflow": {}
+  },
+  "/industries/construction": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 4620,
+    "overflow": {}
+  },
+  "/industries/professional-services": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 3036,
+    "overflow": {}
+  },
+  "/industries/financial-services": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 3988,
+    "overflow": {}
+  },
+  "/industries/non-profit": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 3926,
+    "overflow": {}
+  },
+  "/industries/healthcare": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 3988,
+    "overflow": {}
+  },
+  "/admin/login": {
+    "console_errors": [],
+    "failed_requests": [],
+    "broken_images": [],
+    "body_text_len": 53,
+    "overflow": {}
+  }
+}

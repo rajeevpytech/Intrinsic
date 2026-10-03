@@ -28,3 +28,6 @@ admin@intrinsicamerica.com / IntrinsicAdmin2026! (env-seeded; see memory/test_cr
 - Bug: hero-section images on several pages popped in suddenly (old `.hero-wipe` was a mount-time @keyframes that finished before the element scrolled into view / before the image decoded).
 - Fix: new `src/components/HeroWipe.jsx` (IntersectionObserver + image-decode wait + 4s safety) reveals `.hero-wipe` via `.hw-in`; `index.css` `.hero-wipe` is now a scroll-triggered clip-path transition (left-to-right), matching `ImageReveal`. `AutoReveal` now skips `.hero-wipe`.
 - Verified by testing agent (iteration_5): all 9 hero-wipe elements across 8 routes end fully revealed; zero horizontal overflow across 13 routes at 390/768/1280/1920. 100% frontend pass.
+
+## 2026-06 — Full-site QA sweep (pre-GitHub)
+- Testing agent (iteration_6): all 41 routes × 4 viewports (390/768/1280/1920) = 164 combos. Zero console/script errors, zero failed requests, zero broken images, zero horizontal overflow. Admin login + /admin verified. 100% pass. No fixes needed.
