@@ -1,0 +1,22 @@
+{
+  "summary": "Verified hero image reveal bug fix and responsive-layout sweep for Intrinsic marketing site. All 9 hero-wipe elements across the 8 required routes end fully revealed (class 'hw-in' applied, computed clip-path = 'inset(0px)'), confirming left-to-right wipe animation runs instead of popping in and no hero is left permanently clipped. Responsiveness verified across 13 routes at 4 viewports (390, 768, 1280, 1920): zero horizontal overflow (scrollWidth == viewport width on every page/viewport combination). Mobile smoke test confirms home hero heading 'Engineered, Monitored, and Secured for Business' renders and nav collapses into hamburger with no overflow.",
+  "backend_issues": { "critical": [], "minor": [] },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "HeroWipe 4s safety timeout + IntersectionObserver + image decode wait pattern works well. One minor consideration: the clip-path transition starts at 'inset(0 100% 0 0)' and resolves to 'inset(0px)'; mid-transition reads looked clipped in short tests, so any future automated test should include ~1.2s settle after hw-in is added before asserting the final clip-path value.",
+    "No regressions observed between HeroWipe, ImageReveal (.lr-reveal), and AutoReveal — the skip rules for .hero-wipe prevent conflicts."
+  ],
+  "updated_files": [],
+  "success_rate": { "backend": "n/a (not tested this round)", "frontend": "100%" },
+  "seed_data_creation": "none",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Hero-wipe reveal bug confirmed FIXED on all 9 required testids: cyber-hero-image, cloud-hero-image, managed-hero-visual (both /services/managed-it and /services/managed-support), fin-hero-diagram, hc-hero-diagram, construction-hero-image, ps-hero-diagram, np-mission-hub. Each ends with class 'hw-in' and computed clip-path 'inset(0px)'. Responsiveness verified at 390/768/1280/1920 on /, /services/{cybersecurity,cloud,managed-it,ai}, /industries/{financial-services,healthcare,construction,professional-services,non-profit}, /about, /contact, /resources — no horizontal overflow anywhere. Cloudflare bot challenge may occasionally appear on fast repeated navigations; use networkidle + retry if encountered.",
+  "rca of the issue": "Original bug: hero images on certain pages popped in abruptly. Fix (per files_of_reference): removed the old @keyframes heroWipe mount animation and introduced a new HeroWipe component that uses IntersectionObserver to add 'hw-in' only when the hero scrolls into view (after awaiting inner <img> decode), with a 4s safety fallback. CSS .hero-wipe starts at clip-path 'inset(0 100% 0 0)' and transitions 1.1s to 'inset(0 0 0 0)' once .hw-in is added, producing the left-to-right wipe consistent with ImageReveal. ImageReveal and AutoReveal both skip .hero-wipe elements to avoid conflicts. Verified end-state fully revealed on all target routes."
+}
