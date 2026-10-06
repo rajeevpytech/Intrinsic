@@ -3,6 +3,19 @@ import { useLocation } from "react-router-dom";
 import { api } from "../lib/api";
 import { SEO_ROUTE_MAP } from "./seoRoutes";
 import { applyHead } from "./head";
+import { PAGE_FAQS, faqPageLd } from "./serviceFaqs";
+
+const HQ = { "@type": "PostalAddress", streetAddress: "14 Wall Street, Suite 5C", addressLocality: "New York", addressRegion: "NY", postalCode: "10005", addressCountry: "US" };
+const SERVICE_TYPES = ["Managed IT Services", "Cybersecurity", "Cloud Services", "AI & Automation", "vCIO & vCISO", "Backup & Disaster Recovery"];
+const AREA_SERVED = [{ "@type": "City", name: "New York" }, { "@type": "State", name: "New Jersey" }, { "@type": "City", name: "Boston" }, { "@type": "City", name: "Washington, D.C." }];
+
+function localBusinessLd(org, base) {
+  return {
+    "@context": "https://schema.org", "@type": "ProfessionalService", "@id": base + "/#localbusiness",
+    name: org.name, parentOrganization: { "@id": base + "/#organization" }, url: base + "/", image: org.logo,
+    telephone: org.telephone, email: org.email, priceRange: "$$", address: org.address || HQ, areaServed: AREA_SERVED, serviceType: SERVICE_TYPES,
+  };
+}
 
 const Ctx = createContext(null);
 
@@ -47,6 +60,7 @@ function orgJsonLd(s, base) {
   if (o.email) ld.email = o.email;
   if (o.telephone) ld.telephone = o.telephone;
   if (o.city || o.street) ld.address = { "@type": "PostalAddress", streetAddress: o.street || undefined, addressLocality: o.city || undefined, addressRegion: o.region || undefined, postalCode: o.postal_code || undefined, addressCountry: o.country || undefined };
+  if (o.telephone || o.email) ld.contactPoint = { "@type": "ContactPoint", telephone: o.telephone || undefined, email: o.email || undefined, contactType: "sales", areaServed: "US", availableLanguage: "English" };
   return ld;
 }
 
@@ -94,9 +108,11 @@ export function SeoController() {
     }
     image = toAbs(base, image);
 
-    const jsonLd = [orgJsonLd(settings, base)];
+    const org = orgJsonLd(settings, base);
+    const jsonLd = [org];
     if (pathname === "/") {
-      jsonLd.push({ "@context": "https://schema.org", "@type": "WebSite", "@id": base + "/#website", name: settings.site_name, url: base });
+      jsonLd.push(localBusinessLd(org, base));
+      jsonLd.push({ "@context": "https://schema.org", "@type": "WebSite", "@id": base + "/#website", name: settings.site_name, url: base, publisher: { "@id": base + "/#organization" } });
       const faqs = ((settings.geo && settings.geo.faqs) || []).filter((f) => f.q && f.a);
       if (faqs.length) jsonLd.push({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) });
     } else {
@@ -115,6 +131,8 @@ export function SeoController() {
       if (pathname.startsWith("/services/") && routeDef) {
         jsonLd.push({ "@context": "https://schema.org", "@type": "Service", name: routeDef.title, description: routeDef.description, serviceType: routeDef.title, provider: { "@id": base + "/#organization" }, areaServed: "US", url: canonical });
       }
+      // FAQPage schema mirrors the visible <PageFaqs /> accordion on that page
+      if (PAGE_FAQS[pathname]) jsonLd.push(faqPageLd(PAGE_FAQS[pathname]));
     }
     (extraLd || []).forEach((l) => l && jsonLd.push(l));
 

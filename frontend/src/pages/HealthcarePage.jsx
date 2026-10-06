@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import PageFaqs from "../components/PageFaqs";
 import { ScrollProgress, Reveal } from "../components/common";
 
 const NAVY = "#0b2c8c", INK = "#2d5197", AMBER = "#f2a91c", SKY = "#d9f3fd", CREAM = "#f6f1e7", GREEN = "#2f564d", GREEN2 = "#30584e";
@@ -150,6 +151,7 @@ export default function HealthcarePage() {
       <ScrollProgress />
       <Navbar />
       <main><Hero /><Environment /><Security /><Governance /><Continuity /><Connected /><CTA /></main>
+      <PageFaqs path="/industries/healthcare" />
       <Footer />
     </div>
   );

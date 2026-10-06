@@ -27,4 +27,18 @@ export const PAGE_FAQS = {
     { q: "What does a vCIO or vCISO do?", a: "A vCIO guides technology strategy, budgeting, and roadmap; a vCISO guides security strategy, risk, and compliance—both on a fractional, as-needed basis." },
     { q: "Is this a full-time commitment?", a: "No. Our vCIO/vCISO services are fractional and scaled to your needs, giving executive-level direction without a full-time hire." },
   ],
+  "/industries/healthcare": [
+    { q: "Do you support HIPAA compliance for healthcare?", a: "We align managed IT and security controls and documentation to HIPAA. We support your compliance program; we do not issue certifications." },
+    { q: "Can you work with our EHR and clinical systems?", a: "Yes. We coordinate with your electronic health record and clinical systems and their vendors to keep them secure and available." },
+  ],
+  "/industries/financial-services": [
+    { q: "Can you help with SOC 2 and NYDFS?", a: "We align controls and documentation to SOC 2 and NYDFS requirements and support your audit readiness." },
+    { q: "How do you protect sensitive financial data?", a: "We apply layered security—identity protection, endpoint and network controls, monitoring, and governance—tailored to financial data sensitivity." },
+  ],
 };
+
+export const faqPageLd = (faqs) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+});

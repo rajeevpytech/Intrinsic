@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import PageFaqs from "../components/PageFaqs";
 import { ScrollProgress, Reveal } from "../components/common";
 
 const NAVY = "#0b2c8c", INK = "#2d5197", AMBER = "#f2a91c", SKY = "#d6f2fc";
@@ -154,6 +155,7 @@ export default function FinancialServicesPage() {
       <ScrollProgress />
       <Navbar />
       <main><Hero /><Environment /><Cyber /><Governance /><Infrastructure /><Together /><Start /></main>
+      <PageFaqs path="/industries/financial-services" />
       <Footer />
     </div>
   );

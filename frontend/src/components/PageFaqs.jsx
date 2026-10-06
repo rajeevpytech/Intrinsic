@@ -28,9 +28,7 @@ export default function PageFaqs({ path }) {
                 <span className="font-serif text-[18px] sm:text-[20px] text-midnight font-medium">{f.q}</span>
                 <ChevronDown size={20} className={`shrink-0 mt-1 text-navy transition-transform duration-300 ${open === i ? "rotate-180" : ""}`} />
               </button>
-              {open === i && (
-                <p className="text-slatesage text-[15.5px] leading-[1.75] mt-4 pr-10" data-testid={`faq-a-${i}`}>{f.a}</p>
-              )}
+              <p className="text-slatesage text-[15.5px] leading-[1.75] mt-4 pr-10" hidden={open !== i} data-testid={`faq-a-${i}`}>{f.a}</p>
             </div>
           ))}
         </div>
