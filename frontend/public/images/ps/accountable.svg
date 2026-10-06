@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="500" viewBox="0 0 1120 500" role="img" aria-labelledby="title desc">
+  <title id="title">One Accountable Technology Relationship</title>
+  <desc id="desc">Continuity, expertise and accountability overlapping in one technology relationship.</desc>
+  <defs>
+    <style>
+      .circle{fill:none;stroke:rgba(255,255,255,0.5);stroke-width:3}
+      .label{font:500 34px Georgia,'Times New Roman',serif;fill:#ffffff}
+      .small{font:700 18px Arial,Helvetica,sans-serif;letter-spacing:1.6px;fill:rgba(255,255,255,0.72)}
+    </style>
+  </defs>
+
+  <circle class="circle" cx="245" cy="235" r="190"/>
+  <circle class="circle" cx="565" cy="235" r="190"/>
+  <circle class="circle" cx="885" cy="235" r="190"/>
+
+  <circle cx="405" cy="235" r="16" fill="#FAAF6A"/>
+  <circle cx="725" cy="235" r="16" fill="#FAAF6A"/>
+
+  <text class="label" x="245" y="220" text-anchor="middle">Continuity</text>
+  <text class="small" x="245" y="270" text-anchor="middle">KEEP WORK</text>
+  <text class="small" x="245" y="298" text-anchor="middle">MOVING</text>
+
+  <text class="label" x="565" y="220" text-anchor="middle">Expertise</text>
+  <text class="small" x="565" y="270" text-anchor="middle">APPLY DEEP</text>
+  <text class="small" x="565" y="298" text-anchor="middle">INDUSTRY KNOWLEDGE</text>
+
+  <text class="label" x="885" y="220" text-anchor="middle">Accountability</text>
+  <text class="small" x="885" y="270" text-anchor="middle">A TRUE</text>
+  <text class="small" x="885" y="298" text-anchor="middle">PARTNER</text>
+</svg>

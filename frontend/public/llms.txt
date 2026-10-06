@@ -1,0 +1,27 @@
+# Intrinsic Technology
+
+> Intrinsic Technology is a women-owned and minority-owned managed service provider (MSP) headquartered in New York City. We provide Managed IT, Cybersecurity, Cloud, and AI services—engineered, monitored, and secured for business—with 24/7 monitoring, complete accountability, and one trusted technology partner. We serve healthcare, financial services, legal and professional services, construction, and non-profit organizations across New York, New Jersey, Boston, and Washington, D.C.
+
+## Contact
+- Phone: 212.643.4808
+- Email: consulting@intrinsicamerica.com
+- HQ: 14 Wall Street, Suite 5C, New York, NY 10005
+
+## Key Pages
+- Home: https://intrinsicamerica.com/
+- About: https://intrinsicamerica.com/about
+- Managed IT & Help Desk: https://intrinsicamerica.com/services/managed-it
+- Cybersecurity: https://intrinsicamerica.com/services/cybersecurity
+- Cloud Services: https://intrinsicamerica.com/services/cloud
+- AI & Automation: https://intrinsicamerica.com/services/ai
+- vCIO & vCISO: https://intrinsicamerica.com/services/vcio-vciso
+- Backup & Disaster Recovery: https://intrinsicamerica.com/services/backup-disaster-recovery
+- Industries: https://intrinsicamerica.com/industries
+- Healthcare (HIPAA-aligned): https://intrinsicamerica.com/industries/healthcare
+- Financial Services: https://intrinsicamerica.com/industries/financial-services
+- Resources & Case Studies: https://intrinsicamerica.com/resources
+- Careers: https://intrinsicamerica.com/careers
+- Contact: https://intrinsicamerica.com/contact
+
+## Sitemap
+- https://intrinsicamerica.com/api/sitemap.xml

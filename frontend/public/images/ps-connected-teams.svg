@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="560" viewBox="0 0 1500 560" role="img" aria-labelledby="title desc">
+  <title id="title">Connected Teams with Secure Identity and Access</title>
+  <desc id="desc">Office, remote teams and client locations connected through secure identity and access.</desc>
+  <defs>
+    <style>
+      .blue{fill:none;stroke:#4F7FA6;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .light{fill:none;stroke:#7A9AAF;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+      .dash{fill:none;stroke:#5C90AE;stroke-width:3;stroke-dasharray:9 10;stroke-linecap:round}
+      .sage{fill:#90A999;stroke:#789486;stroke-width:2}
+      .pale{fill:#DCE5DF;stroke:#789486;stroke-width:2}
+      .head{font:700 24px Arial,Helvetica,sans-serif;letter-spacing:1.3px;fill:#00388E}
+      .body{font:500 20px Arial,Helvetica,sans-serif;letter-spacing:2px;fill:#6683A0}
+      .top{font:700 22px Arial,Helvetica,sans-serif;letter-spacing:1.7px;fill:#315F82}
+    </style>
+  </defs>
+
+  <!-- Secure access rail -->
+  <text class="top" x="750" y="40" text-anchor="middle">SECURE IDENTITY &amp; ACCESS</text>
+  <path class="dash" d="M275 95h330l55 52M840 147l55-52h330"/>
+  <path class="dash" d="M660 147h180"/>
+  <g class="blue" transform="translate(718 70)">
+    <rect x="0" y="24" width="64" height="58" rx="6"/>
+    <path d="M14 24V10a18 18 0 0 1 36 0v14M32 46v15"/>
+  </g>
+
+  <!-- Office -->
+  <g transform="translate(65 125)">
+    <path class="light" d="M0 235h400"/>
+    <g class="blue">
+      <path d="M95 235V20h118v215M213 235V106h92v129"/>
+      <path d="M118 50h25v25h-25zM160 50h25v25h-25zM118 90h25v25h-25zM160 90h25v25h-25zM118 130h25v25h-25zM160 130h25v25h-25zM118 170h25v25h-25zM160 170h25v25h-25z"/>
+      <path d="M232 132h21v23h-21zM268 132h21v23h-21zM232 172h21v23h-21zM268 172h21v23h-21z"/>
+      <path d="M70 235v-92M75 143h14M89 143v92"/>
+    </g>
+    <g class="sage">
+      <circle cx="35" cy="190" r="28"/><path d="M35 216v19" class="light"/>
+      <circle cx="342" cy="187" r="29"/><path d="M342 214v21" class="light"/>
+      <circle cx="382" cy="203" r="22"/><path d="M382 224v11" class="light"/>
+    </g>
+    <path class="dash" d="M305 177h70"/>
+  </g>
+  <text class="head" x="265" y="397" text-anchor="middle">OFFICE</text>
+  <text class="body" x="265" y="436" text-anchor="middle">SAME EXPERIENCE</text>
+  <text class="body" x="265" y="469" text-anchor="middle">ANY LOCATION</text>
+
+  <!-- Remote team -->
+  <g transform="translate(575 215)">
+    <path class="light" d="M0 145h350"/>
+    <g class="blue">
+      <path d="M55 112h240l18 33H37z"/>
+      <rect x="105" y="20" width="140" height="90" rx="5"/>
+      <path d="M123 36h104v55H123zM150 110v22M200 110v22M135 132h80"/>
+      <path d="M145 76l20-18 18 12 29-27"/>
+    </g>
+    <g class="sage">
+      <path d="M65 85h25v27H65zM55 55c8 0 16 7 16 18s-8 18-16 18-16-7-16-18 8-18 16-18z"/>
+      <path d="M270 85h25v27h-25zM282 48c11 0 20 9 20 21s-9 21-20 21-20-9-20-21 9-21 20-21z"/>
+    </g>
+    <path class="dash" d="M-105 70h90M365 70h90"/>
+  </g>
+  <text class="head" x="750" y="397" text-anchor="middle">REMOTE TEAMS</text>
+  <text class="body" x="750" y="436" text-anchor="middle">WORK SECURELY</text>
+  <text class="body" x="750" y="469" text-anchor="middle">FROM ANYWHERE</text>
+
+  <!-- Client locations -->
+  <g transform="translate(1040 145)">
+    <path class="light" d="M0 215h390"/>
+    <g class="blue">
+      <path d="M100 215V65h120v150M88 65h144M115 45h90v20M145 25h30v20"/>
+      <path d="M123 88h24v24h-24zM170 88h24v24h-24zM123 128h24v24h-24zM170 128h24v24h-24zM123 168h24v24h-24zM170 168h24v24h-24z"/>
+    </g>
+    <g class="sage">
+      <circle cx="42" cy="168" r="27"/><path d="M42 194v21" class="light"/>
+      <circle cx="262" cy="165" r="30"/><path d="M262 193v22" class="light"/>
+      <circle cx="320" cy="181" r="24"/><path d="M320 203v12" class="light"/>
+      <circle cx="366" cy="175" r="27"/><path d="M366 201v14" class="light"/>
+    </g>
+  </g>
+  <text class="head" x="1235" y="397" text-anchor="middle">CLIENT LOCATIONS</text>
+  <text class="body" x="1235" y="436" text-anchor="middle">COLLABORATE</text>
+  <text class="body" x="1235" y="469" text-anchor="middle">WITH CONFIDENCE</text>
+</svg>

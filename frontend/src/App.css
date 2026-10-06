@@ -1,0 +1,76 @@
+:root { --z: 1; --vw: calc(100vw / var(--z)); --vh: calc(100vh / var(--z)); --nav-h: 68px; }
+@media (min-width: 1280px) { :root { --nav-h: 104px; } }
+
+.App {
+  min-height: var(--vh);
+}
+
+.container-x {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
+@media (max-width: 640px) {
+  .container-x { padding-left: 1.25rem; padding-right: 1.25rem; }
+}
+
+/* Let diagram labels reflow according to their actual column width. */
+.hc-env-graphic, .hc-connected-graphic, .ps-security-graphic {
+  container-type: inline-size;
+  min-width: 0;
+}
+@container (max-width: 520px) {
+  .hc-env-graphic [data-testid="hc-env-diagram"] {
+    aspect-ratio: auto !important;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+  }
+  [data-testid="hc-env-diagram"] > svg,
+  [data-testid="hc-env-diagram"] > span { display: none; }
+  [data-testid="hc-env-diagram"] > div {
+    position: relative;
+    inset: auto;
+    transform: none;
+    width: 100%;
+    min-width: 0;
+    flex-direction: row;
+  }
+  [data-testid="hc-env-diagram"] > div > div { min-width: 0; text-align: left; overflow-wrap: anywhere; }
+  [data-testid="hc-env-diagram"] > div + div::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 24px;
+    left: 25px;
+    top: -24px;
+    background: #b9cde6;
+  }
+  .hc-connected-graphic [data-testid="hc-connected-diagram"] { grid-template-columns: minmax(0,1fr); }
+  [data-testid="hc-network-layer"] > span { width: 1px; height: 24px; }
+  [data-testid="hc-network-layer"] > p { max-width: 260px; }
+}
+@container (max-width: 560px) {
+  .ps-security-graphic [data-testid="ps-security-diagram"] {
+    aspect-ratio: auto !important;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  [data-testid="ps-security-diagram"] > svg { display: none; }
+  [data-testid="ps-security-diagram"] > div,
+  [data-testid="ps-security-diagram"] > span {
+    position: relative;
+    inset: auto;
+    transform: none;
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  [data-testid="ps-security-diagram"] > span { width: 64px; height: 64px; align-self: center; margin-bottom: 8px; }
+}

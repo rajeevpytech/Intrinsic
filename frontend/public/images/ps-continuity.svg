@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500" role="img" aria-labelledby="title desc">
+  <title id="title">Continuity for Time-Sensitive Work</title>
+  <desc id="desc">A four-stage operational continuity timeline: Monitor, Respond, Recover and Continue.</desc>
+  <defs>
+    <style>
+      .blue{fill:none;stroke:#24699E;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .rule{fill:none;stroke:#4E83AB;stroke-width:2.5}
+      .fine{fill:none;stroke:#9EB2C1;stroke-width:2}
+      .head{font:700 23px Arial,Helvetica,sans-serif;letter-spacing:2.1px;fill:#00388E}
+      .body{font:500 18px Arial,Helvetica,sans-serif;letter-spacing:1.7px;fill:#6683A0}
+      .close{font:700 21px Arial,Helvetica,sans-serif;letter-spacing:2.5px;fill:#41739B}
+    </style>
+  </defs>
+
+  <!-- Primary timeline -->
+  <path class="blue" d="M70 172H1510l-16-14m16 14-16 14"/>
+  <circle cx="70" cy="172" r="9" fill="#fff" stroke="#24699E" stroke-width="3"/>
+  <circle cx="520" cy="172" r="18" fill="#FAAF3A"/>
+  <circle cx="780" cy="172" r="8" fill="#fff" stroke="#24699E" stroke-width="3"/>
+  <circle cx="1150" cy="172" r="8" fill="#fff" stroke="#24699E" stroke-width="3"/>
+
+  <!-- Monitor icon -->
+  <g class="blue" transform="translate(177 36)">
+    <rect x="0" y="0" width="90" height="64" rx="3"/>
+    <path d="M16 35h16l9-17 13 32 10-20h12M45 64v24M22 88h46"/>
+  </g>
+
+  <!-- Respond tools icon -->
+  <g class="blue" transform="translate(563 30)">
+    <path d="M18 4c-5 18 3 32 20 38L9 71l19 19 29-29c7 16 20 24 38 18L70 54l14-14-10-10-14 14L35 19C31 9 25 4 18 4z"/>
+    <path d="M63 6l27 27M76 3l17 17"/>
+  </g>
+
+  <!-- Recover database icon -->
+  <g class="blue" transform="translate(895 28)">
+    <ellipse cx="45" cy="13" rx="32" ry="13"/>
+    <path d="M13 13v72c0 8 14 14 32 14s32-6 32-14V13M13 37c0 8 14 14 32 14s32-6 32-14M13 61c0 8 14 14 32 14s32-6 32-14"/>
+  </g>
+
+  <!-- Continue icon -->
+  <g class="blue" transform="translate(1265 43)">
+    <path d="M0 0l45 34L0 68zM45 0l45 34-45 34z"/>
+  </g>
+
+  <!-- Stage dividers -->
+  <path class="fine" d="M390 205v110M705 205v110M1055 205v110M1375 205v110"/>
+
+  <!-- Labels -->
+  <text class="head" x="220" y="232" text-anchor="middle">MONITOR</text>
+  <text class="body" x="220" y="270" text-anchor="middle">DETECT ISSUES</text>
+  <text class="body" x="220" y="298" text-anchor="middle">BEFORE THEY IMPACT</text>
+  <text class="body" x="220" y="326" text-anchor="middle">YOUR WORK</text>
+
+  <text class="head" x="545" y="232" text-anchor="middle">RESPOND</text>
+  <text class="body" x="545" y="270" text-anchor="middle">EXPERT SUPPORT</text>
+  <text class="body" x="545" y="298" text-anchor="middle">WHEN YOU NEED IT</text>
+
+  <text class="head" x="885" y="232" text-anchor="middle">RECOVER</text>
+  <text class="body" x="885" y="270" text-anchor="middle">RESTORE SYSTEMS</text>
+  <text class="body" x="885" y="298" text-anchor="middle">AND DATA QUICKLY</text>
+
+  <text class="head" x="1220" y="232" text-anchor="middle">CONTINUE</text>
+  <text class="body" x="1220" y="270" text-anchor="middle">KEEP CLIENT</text>
+  <text class="body" x="1220" y="298" text-anchor="middle">WORK MOVING</text>
+
+  <!-- Closing statement -->
+  <path class="rule" d="M85 385H1510"/>
+  <text class="close" x="800" y="440" text-anchor="middle">PREPARED SYSTEMS. INFORMED RESPONSE. CONTINUING CLIENT SERVICE.</text>
+</svg>
