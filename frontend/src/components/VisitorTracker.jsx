@@ -7,7 +7,7 @@ export const VisitorTracker = () => {
   const { pathname, search } = useLocation();
   useEffect(() => {
     const params = new URLSearchParams(search);
-    if (pathname.startsWith('/admin') || pathname.startsWith('/api') || getToken() || window.self !== window.top || params.has('edit') || params.has('review') || navigator.doNotTrack === '1' || navigator.globalPrivacyControl) return;
+    if (window.__INTRINSIC_PRERENDER__ || pathname.startsWith('/admin') || pathname.startsWith('/api') || getToken() || window.self !== window.top || params.has('edit') || params.has('review') || navigator.doNotTrack === '1' || navigator.globalPrivacyControl) return;
     const timer = setTimeout(() => {
       try {
         let visitor = localStorage.getItem('intr_visitor_id');

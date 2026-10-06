@@ -19,6 +19,9 @@ import requests
 from fastapi import FastAPI, APIRouter, HTTPException, Depends, UploadFile, File, Form, Header, Response, BackgroundTasks, Request
 from fastapi.responses import PlainTextResponse, HTMLResponse, RedirectResponse
 import ssr_render
+from styled_pages import read_styled_page, read_styled_404, route_of
+import styled_refresh
+from upload_recovery import recover_original
 from starlette.middleware.cors import CORSMiddleware
 from PIL import Image, ImageDraw, ImageFont
 import io
@@ -610,7 +613,7 @@ async def seo_update(body: dict, admin: dict = Depends(get_current_admin)):
     await db.settings.update_one({"key": "seo"}, {"$set": body}, upsert=True)
     return await get_seo_settings()
 
-@api_router.get("/sitemap.xml")
+@api_router.api_route("/sitemap.xml", methods=["GET", "HEAD"])
 async def sitemap_xml(request: Request):
     seo = await get_seo_settings()
     base = _seo_base_url(request, seo)
@@ -636,7 +639,7 @@ async def sitemap_xml(request: Request):
            + "\n".join(items) + "\n</urlset>")
     return Response(content=xml, media_type="application/xml")
 
-@api_router.get("/robots.txt")
+@api_router.api_route("/robots.txt", methods=["GET", "HEAD"])
 async def robots_txt(request: Request):
     seo = await get_seo_settings()
     base = _seo_base_url(request, seo)
@@ -654,7 +657,7 @@ async def robots_txt(request: Request):
     )
     return PlainTextResponse(body)
 
-@api_router.get("/llms.txt")
+@api_router.api_route("/llms.txt", methods=["GET", "HEAD"])
 async def llms_txt(request: Request):
     seo = await get_seo_settings()
     geo = seo.get("geo") or {}
@@ -711,12 +714,18 @@ def _load_ssr_template() -> str | None:
         logger.error(f"SSR template load failed ({path}): {e}")
         return None
 
-@api_router.get("/ssr")
+@api_router.api_route("/ssr", methods=["GET", "HEAD"])
 async def ssr_page(request: Request):
     """Render a public page's full HTML. nginx proxies HTML requests here on the
     VPS (X-Original-URI); ?path= is accepted for direct testing."""
     path = request.headers.get("x-original-uri") or request.query_params.get("path") or "/"
     host = request.headers.get("x-forwarded-host") or request.headers.get("host") or ""
+    build_dir = _styled_build_dir()
+    # Preserve host canonicalization and private routes in the existing renderer.
+    if not host.lower().startswith("www."):
+        styled = read_styled_page(build_dir, path)
+        if styled is not None:
+            return HTMLResponse(styled, headers={"Cache-Control": "public, max-age=60"})
     template = _load_ssr_template()
     if not template:
         raise HTTPException(status_code=503, detail="Frontend build not available for SSR")
@@ -727,7 +736,23 @@ async def ssr_page(request: Request):
     headers = {"Cache-Control": "public, max-age=60", "Content-Type": result["content_type"]}
     # Per-result overrides (e.g. X-Robots-Tag: noindex + no-store for admin / error pages)
     headers.update(result.get("headers") or {})
-    return HTMLResponse(content=result["html"], status_code=result["status"], headers=headers)
+    html = result["html"]
+    if result["status"] == 404:
+        html = read_styled_404(build_dir) or html
+    elif result["status"] == 200 and not route_of(path).startswith("/admin"):
+        # Public page without a styled snapshot yet (e.g. just published): real React shell now,
+        # styled snapshot generated in the background.
+        headers["Cache-Control"] = "no-store"
+        styled_refresh.schedule(build_dir, _styled_api_origin())
+    return HTMLResponse(content=html, status_code=result["status"], headers=headers)
+
+
+def _styled_build_dir() -> Path:
+    return Path(os.environ.get("FRONTEND_BUILD_DIR") or ROOT_DIR.parent / "frontend" / "build")
+
+
+def _styled_api_origin() -> str:
+    return os.environ.get("STYLED_REFRESH_API_ORIGIN") or "http://127.0.0.1:8000"
 
 @api_router.get("/og/page.png")
 async def og_page(title: str = "Intrinsic Technology", label: str = "Intrinsic Technology"):
@@ -837,8 +862,23 @@ async def serve_file(path: str):
     ctype = record.get("content_type") if record else "application/octet-stream"
     try:
         data, ct = get_object(path)
-    except Exception:
-        raise HTTPException(status_code=404, detail="File not found")
+    except Exception as error:
+        recovered = recover_original(ROOT_DIR / "seed_data" / "site_export.json", path)
+        if recovered is None:
+            # Unrecoverable brand-logo upload: serve the approved project logo for that slot.
+            for selector, asset in ((r'site-header.*img$', "logo-navy.png"), (r'footer-logo.*img$', "logo-white.png")):
+                edit = await db.live_edits.find_one({"props.src": {"$in": [path, "/api/files/" + path]},
+                                                     "selector": {"$regex": selector}})
+                logo = ROOT_DIR.parent / "frontend" / "src" / "assets" / asset
+                if edit and logo.is_file():
+                    logger.warning("Upload %s missing; serving approved %s", path, asset)
+                    recovered = (logo.read_bytes(), "image/png")
+                    break
+        if recovered is None:
+            logger.warning("Upload unavailable: %s (%s)", path, type(error).__name__)
+            raise HTTPException(status_code=404, detail="File not found")
+        data, ct = recovered
+        ctype = ct
     return Response(content=data, media_type=ctype or ct)
 
 @api_router.get("/admin/storage/status")
@@ -1125,6 +1165,14 @@ async def modes_stats(admin: dict = Depends(get_current_admin)):
 app.include_router(api_router)
 app.include_router(create_analytics_router(db, get_current_admin))
 app.include_router(create_migration_router(db, get_current_admin, put_object, get_object))
+
+@app.middleware("http")
+async def refresh_styled_html_on_publish(request: Request, call_next):
+    response = await call_next(request)
+    if response.status_code < 400 and styled_refresh.is_publish(request.method, request.url.path):
+        styled_refresh.schedule(_styled_build_dir(), _styled_api_origin())
+    return response
+
 
 app.add_middleware(
     CORSMiddleware,

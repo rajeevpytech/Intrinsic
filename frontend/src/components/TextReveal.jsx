@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const SELECTOR = "section h1, section h2, section h3, section h4, section p, section li, section blockquote";
+const SELECTOR = "#root section :is(h1, h2, h3, h4, p, li, blockquote)";
 const SKIP = ".reveal, [data-testid='site-footer'], nav, header, [role='dialog'], .admin-shell";
 
 const TextReveal = () => {
@@ -43,7 +43,7 @@ const TextReveal = () => {
     }, 60);
 
     const safety = setTimeout(() => {
-      document.querySelectorAll(".treveal:not(.treveal-in)").forEach((el) => {
+      document.querySelectorAll("#root .treveal:not(.treveal-in)").forEach((el) => {
         if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("treveal-in");
       });
     }, 2200);
@@ -52,7 +52,7 @@ const TextReveal = () => {
       clearTimeout(timer);
       clearTimeout(safety);
       if (observer) observer.disconnect();
-      document.querySelectorAll(".treveal").forEach((el) => {
+      document.querySelectorAll("#root .treveal").forEach((el) => {
         el.classList.remove("treveal", "treveal-in");
         el.style.transitionDelay = "";
       });

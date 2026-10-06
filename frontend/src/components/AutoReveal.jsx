@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-const TARGETS = "main section :is(h1,h2,h3,h4,p,ul,ol,blockquote,figure,table,button,a[class*=btn],svg:not(.lucide))";
+const TARGETS = "#root main section :is(h1,h2,h3,h4,p,ul,ol,blockquote,figure,table,button,a[class*=btn],svg:not(.lucide))";
 const SKIP = ".reveal,.treveal,.areveal,[class*=animate-],[data-no-reveal],nav,header,footer,form,button,a,li,h1,h2,h3,h4,p";
 
 const apply = (io) => {
@@ -20,7 +20,7 @@ const apply = (io) => {
 };
 
 const applyImages = (io) => {
-  document.querySelectorAll("main img").forEach((img) => {
+  document.querySelectorAll("#root main img").forEach((img) => {
     if (img.closest("nav,header,footer")) return;
     if (img.classList.contains("air-band")) { img.dataset.imgReveal = "1"; return; }
     img.loading = "lazy";
@@ -45,7 +45,7 @@ export default function AutoReveal() {
     const io = new IntersectionObserver((entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } }), { threshold: 0, rootMargin: "0px 0px -8% 0px" });
     let t = setTimeout(() => apply(io), 60);
     const mo = new MutationObserver(() => { clearTimeout(t); t = setTimeout(() => apply(io), 120); });
-    const main = document.querySelector("main") || document.body;
+    const main = document.querySelector("#root main") || document.getElementById("root") || document.body;
     mo.observe(main, { childList: true, subtree: true });
     let rt;
     const onResize = () => { clearTimeout(rt); rt = setTimeout(() => applyImages(io), 200); };

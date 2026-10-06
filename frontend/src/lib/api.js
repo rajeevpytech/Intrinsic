@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BACKEND = process.env.REACT_APP_BACKEND_URL;
+export const BACKEND = (process.env.REACT_APP_BACKEND_URL || "").replace(/\/+$/, "");
 export const API = `${BACKEND}/api`;
 
 export const imgUrl = (v) => (!v ? "" : v.startsWith("http") || v.startsWith("/") ? v : `${API}/files/${v}`);

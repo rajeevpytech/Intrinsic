@@ -130,3 +130,25 @@ def test_robots(client):
     r = client.get(f"{BASE_URL}/api/robots.txt")
     assert r.status_code == 200
     assert "User-agent" in r.text or "user-agent" in r.text.lower()
+
+
+
+def test_brief_download(client):
+    # Get a real brief id
+    briefs = client.get(f"{BASE_URL}/api/content/service-briefs").json()
+    assert len(briefs) > 0, "no service briefs seeded"
+    brief_id = briefs[0]["id"]
+    payload = {"name": "TEST_User", "email": "test_brief@example.com", "company": "TEST Co", "brief_id": brief_id, "message": "TEST brief download"}
+    r = client.post(f"{BASE_URL}/api/brief-download", json=payload)
+    assert r.status_code in (200, 201), r.text
+
+
+def test_ssr_home(client):
+    r = client.get(f"{BASE_URL}/api/ssr", params={"path": "/"})
+    assert r.status_code == 200
+    assert "<html" in r.text.lower() or "<!doctype" in r.text.lower()
+
+
+def test_auth_me_no_token(client):
+    r = client.get(f"{BASE_URL}/api/auth/me")
+    assert r.status_code in (401, 403)

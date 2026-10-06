@@ -44,7 +44,10 @@ def _meta_head(template: str, *, title: str, description: str, canonical: str,
 
 
 def _inject_body(template: str, inner: str) -> str:
-    return re.sub(r'<div id="root">[\s\S]*?</div>', f'<div id="root">{inner}</div>', template, count=1)
+    # Never shown as a plain-text layout: React renders the real page into #root; the
+    # simplified content is only a no-JS fallback until the styled snapshot exists.
+    return re.sub(r'<div id="root">[\s\S]*?</div>',
+                  lambda _: f'<div id="root"></div><noscript id="ssr-fallback">{inner}</noscript>', template, count=1)
 
 
 PRIVATE_PREFIXES = ("/admin",)  # SPA-only, must not be indexed and must not 404

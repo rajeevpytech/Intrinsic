@@ -79,6 +79,8 @@ section[id] { scroll-margin-top: 88px; }
 /* soft page-load fade */
 @keyframes page-in { from { opacity: 0; } to { opacity: 1; } }
 .page-in { animation: page-in 0.6s ease both; }
+/* styled-prerender -> interactive swap: settle reveal classes without replaying transitions */
+html.pr-swap, html.pr-swap * { transition: none !important; }
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }

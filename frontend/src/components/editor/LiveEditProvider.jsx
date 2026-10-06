@@ -7,7 +7,15 @@ const LiveEditContext = createContext(null);
 
 // Saved edits for every page, kept in the browser so a page paints with its edits immediately.
 const CACHE_KEY = "intr_live_edits_cache";
-const editsCache = (() => { try { return JSON.parse(localStorage.getItem(CACHE_KEY)) || {}; } catch { return {}; } })();
+const editsCache = (() => {
+  const initial = window.__INTRINSIC_PUBLIC_DATA__?.["/api/live-edits"];
+  if (initial) {
+    const grouped = {};
+    initial.forEach(edit => { (grouped[edit.path] ||= []).push(edit); });
+    return grouped;
+  }
+  try { return JSON.parse(localStorage.getItem(CACHE_KEY)) || {}; } catch { return {}; }
+})();
 const persistCache = () => { try { localStorage.setItem(CACHE_KEY, JSON.stringify(editsCache)); } catch { /* storage full */ } };
 const cachePage = (path, list) => { editsCache[path] = list; persistCache(); };
 const NO_EDITS = [];

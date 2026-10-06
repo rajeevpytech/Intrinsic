@@ -22,7 +22,7 @@ export const usePageSeo = (opts) => {
 };
 
 export function SeoProvider({ children }) {
-  const [settings, setSettings] = useState(null);
+  const [settings, setSettings] = useState(() => window.__INTRINSIC_PUBLIC_DATA__?.["/api/seo"] || null);
   const [pageSeo, setPageSeo] = useState(null);
   useEffect(() => {
     api.get("/seo").then(({ data }) => setSettings(data)).catch(() => setSettings({}));

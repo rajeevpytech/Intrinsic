@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#00388e" />
         <style>html.le-wait #root{visibility:hidden}</style>
-        <script>(function(){var d=document.documentElement;try{if(localStorage.getItem("intr_live_edits_ready")==="1")return}catch(e){}d.classList.add("le-wait");setTimeout(function(){d.classList.remove("le-wait")},2500)})();</script>
+        <script>(function(){var d=document.documentElement;if(d.hasAttribute("data-prerendered"))return;try{if(localStorage.getItem("intr_live_edits_ready")==="1")return}catch(e){}d.classList.add("le-wait");setTimeout(function(){d.classList.remove("le-wait")},2500)})();</script>
 
         <title>Intrinsic Technology | Managed IT, Cybersecurity & Cloud Services</title>
         <meta name="description" content="Intrinsic Technology delivers Managed IT, Cybersecurity, and Cloud services—engineered, monitored, and secured for business. A women-owned and minority-owned MSP in New York City providing 24/7 monitoring, complete accountability, and one trusted technology partner." />

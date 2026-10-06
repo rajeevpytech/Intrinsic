@@ -25,11 +25,11 @@ export default function ImageReveal() {
     };
 
     const revealAll = () => {
-      document.querySelectorAll("main img.lr-reveal:not(.lr-reveal-in)").forEach((img) => img.classList.add("lr-reveal-in"));
+      document.querySelectorAll("#root main img.lr-reveal:not(.lr-reveal-in)").forEach((img) => img.classList.add("lr-reveal-in"));
     };
 
     const scan = () => {
-      document.querySelectorAll("main img:not([data-lr]):not(.air-reveal):not(.hero-wipe):not(.no-reveal)").forEach((img) => {
+      document.querySelectorAll("#root main img:not([data-lr]):not(.air-reveal):not(.hero-wipe):not(.no-reveal)").forEach((img) => {
         img.setAttribute("data-lr", "1");
         if (!eligible(img)) return;
         // Only clip images below the current viewport; in/above-view images stay visible.
@@ -39,7 +39,7 @@ export default function ImageReveal() {
     };
 
     const reveal = () => {
-      document.querySelectorAll("main img.lr-reveal:not(.lr-reveal-in)").forEach((img) => {
+      document.querySelectorAll("#root main img.lr-reveal:not(.lr-reveal-in)").forEach((img) => {
         if (img.getBoundingClientRect().top < window.innerHeight * 0.92) img.classList.add("lr-reveal-in");
       });
     };

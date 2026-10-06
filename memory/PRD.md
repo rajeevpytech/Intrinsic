@@ -87,3 +87,16 @@ deploy/INITIAL-HTML-FIX.md. Production verification PENDING (no VPS access).
 - P2: Login form placeholder says "Username" though it expects email (cosmetic, from original app).
 - P2: server.py is one large file; could be split into routers (out of scope for a port).
 - P3: Go-live deployment with custom domain (intrinsicamerica.com) + SEO submission (see DEPLOYMENT.md).
+
+## Styled initial HTML v2 + routing fixes (2026-10-06)
+Built on branch codex/fix-styled-initial-html (= main 7d1c265 + 8bde753). Local commit e3dbe3d on
+fix/styled-initial-html-v2 (NOT pushed: no GitHub credentials in workspace; bundle at /root/intrinsic-fix-styled-initial-html-v2.bundle).
+- Root cause of upload 404s on production: nginx static-extension regex beat `location /api/` -> `^~ /api/`.
+- Repo nginx conf also spliced paths (`proxy_pass .../api/ssr` in `location /`) -> rewrite form.
+- Real React prerender (frontend/scripts/prerender-styled.cjs) + seamless swap (prerender-boot.js);
+  reveal scripts scoped to #root; styled 404; HEAD support; publish-triggered refresh (backend/styled_refresh.py);
+  plain-text backend/prerender.py retired; deploy/update-styled-vps.sh staged deploy + rollback + live checks.
+- Verified in preview via local nginx :8080 (repo conf) -> backend :8001: 46 routes x 3 URL variants,
+  92 route/device browser runs (no-JS, slow JS+API), functional (nav, contact form, admin login), publish refresh.
+- NOT deployed to the VPS; production verification pending.
+- Preview-only backend/.env additions: STYLED_PRERENDER_TOOLS=/root/prtools, STYLED_REFRESH_API_ORIGIN=:8001, STYLED_REFRESH_DELAY=5.

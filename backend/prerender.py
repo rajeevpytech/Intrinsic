@@ -128,4 +128,9 @@ async def main() -> int:
 
 
 if __name__ == "__main__":
+    # Retired: this wrote simplified plain-text pages over the styled React prerenders.
+    if os.environ.get("ALLOW_LEGACY_PLAIN_PRERENDER") != "1":
+        print("backend/prerender.py is retired. Use frontend/scripts/prerender-styled.cjs "
+              "(run by deploy/update-styled-vps.sh) to generate styled initial HTML.", file=sys.stderr)
+        raise SystemExit(2)
     raise SystemExit(asyncio.run(main()))

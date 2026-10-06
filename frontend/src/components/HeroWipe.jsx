@@ -12,7 +12,7 @@ export default function HeroWipe() {
     if (typeof window === "undefined") return undefined;
     const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    const els = Array.from(document.querySelectorAll("main .hero-wipe"));
+    const els = Array.from(document.querySelectorAll("#root main .hero-wipe"));
     if (!els.length) return undefined;
 
     const reveal = (el) => el.classList.add("hw-in");
